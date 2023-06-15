@@ -21,6 +21,7 @@
   export let component = {};
   import tabler from "yesvelte/css/tabler.min.css?url";
   import daisyui from "yesvelte/css/daisyui.min.css?url";
+  import Code from './Code.svelte'
 
   let theme = "tabler";
 
@@ -64,7 +65,6 @@
       colMd="4"
       colLg="3"
     >
-      {#key props}
         <Accordions>
           <Accordion title="Applied Props:">
             <AccordionBody>
@@ -107,9 +107,9 @@
             {/if}
           </El>
         {/each}
-      {/key}
     </CardBody>
   </El>
+  <Code {props} component={component.name}/>
 </Card>
 
 <style>

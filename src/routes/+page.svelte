@@ -14,5 +14,7 @@
     items={["button", "el", "alert"]}
     bind:value={componentName}
   />
-  <Preview component={components[componentName]} />
+  {#key componentName}
+    <Preview component={components[componentName]} />
+  {/key}
 </El>

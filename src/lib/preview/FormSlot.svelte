@@ -4,8 +4,8 @@
     export let value;
 </script>
 
-{#if typeof value === 'string'}
-    <FormInput {...$$restProps} bind:value/>
-{:else}
+{#if typeof value === 'object'}
     NOT SUPPORTED
+{:else}
+    <FormInput {...$$restProps} bind:value/>
 {/if}
