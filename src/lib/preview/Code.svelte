@@ -30,7 +30,7 @@
     function renderSlot(slot) {
       if (typeof slot === "string") {
         return slot;
-      } else {
+      } else if(slot) {
         return slot.map((sl) => renderSlotItem(sl));
       }
     }
